@@ -1,0 +1,72 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make sure body and html take up the full height of the viewport */
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #2143e9;
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  nav ul li:hover {
+    background-color: #187fed;
+  }
+  
+  #slider {
+    width: 100%;
+    height: 100vh; /* Make slider take up full viewport height */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Ensure the slides take up full height of the slider */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove any default margin */
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%; /* Set image height to full viewport height */
+    object-fit: cover; /* Ensure the image covers the entire slide */
+  }
+  .slide {
+    position: relative;
+  }
+  
+  .slide-content {
+    position: relative;
+  }
+  
+  
+  

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bpcl</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add styles for slider */
+    #slider {
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+    }
+    #slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      flex: 0 0 auto;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Add styles for text on slides */
+    .slide-text {
+      position: absolute;
+      top: 70%;
+      color: yellow;
+      font-size: 55px; /* Adjust font size */
+      font-weight: bold;
+      animation: slideTextAnimation 20s linear infinite; /* Add animation */
+      white-space: nowrap; /* Prevent text from wrapping */
+      transform: translateX(-100%); /* Initial position outside the slide */
+      background-color: rgb(199, 199, 199);
+    }
+
+    @keyframes slideTextAnimation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    
+    /* Add styles for navbar */
+    header nav {
+      display: flex;
+      align-items: center; /* Align items vertically */
+    }
+    
+    header nav img {
+      height: 50px;
+      margin-right: 10px; /* Adjust spacing between logo and text */
+    }
+    
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header nav ul li {
+      margin-right: 20px; /* Adjust spacing between menu items */
+    }
+    
+    header nav ul li a {
+      font-weight: bold; 
+      color: rgb(242, 242, 10);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img style="margin-left: 30px;" src="https://seeklogo.com/images/B/bharat-petroleum-logo-01FB85ED43-seeklogo.com.png" alt="">
+      <ul style="margin-left: 110px;" >
+        <li><a href="document1.html">IMS Documents</a></li>
+        <li><a href="document2.html">Operations Documents</a></li>
+        <li><a href="document3.html">HSSE Documents</a></li>
+        <li><a href="document3.html">Maintenance Documents</a></li>
+        <li><a href="document3.html">ROU Documents</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="slider">
+    <div id="slides">
+      
+      <div class="slide">
+        <img src="C:\Users\Administrator\Desktop\chetan\IMG_9964.JPG" alt="Slide 2">
+        <div class="slide-text"> pipelines bina document dashboard pipelines bina document dashboard </div>
+      </div>
+      
+      <div class="slide">
+        <img src="C:\Users\Administrator\Desktop\chetan\IMG_9942.JPG" alt="Slide 3">
+        <div class="slide-text"> pipelines bina document dashboard pipelines bina document dashboard  </div>
+      </div>
+      
+      <div class="slide">
+        <img src="C:\Users\Administrator\Desktop\chetan\IMG_9930.JPG" alt="Slide 4">
+        <div class="slide-text"> pipelines bina document dashboard pipelines bina document dashboard  </div>
+      </div>
+      
+      <div class="slide">
+        <img src="C:\Users\Administrator\Desktop\chetan\IMG_9965.JPG" alt="Slide 3">
+        <div class="slide-text"> pipelines bina document dashboard pipelines bina document dashboard </div>
+      </div>
+      
+      <div class="slide">
+        <img src="IMG_9954.JPG" alt="Slide 3">
+        <div class="slide-text"> pipelines bina document dashboard pipelines bina document dashboard </div>
+      </div>
+      
+      <div class="slide">
+        <img src="IMG_9964.JPG" alt="Slide 3">
+        <div class="slide-text"> pipelines bina document dashboard pipelines bina document dashboard  </div>
+      </div>
+      
+      <!-- <div class="slide"><img src="IMG_9964.JPG" alt="Slide 3"></div> -->
+    </div>
+  </div>
+
+  <div id="content">
+    <!-- Content will appear here -->
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // JavaScript for the slider
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.getElementById('slides');
+    let currentSlide = 0;
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }, 5000); 
+  </script>
+</body>
+</html>
